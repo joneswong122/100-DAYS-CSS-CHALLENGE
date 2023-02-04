@@ -131,7 +131,6 @@
   border-color: transparent transparent #B90B0C transparent;
 }
 
-
 @keyframes flash {
   0% {
     transform: rotate(-44deg) translateX(-30px);
