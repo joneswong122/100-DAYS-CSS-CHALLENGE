@@ -1,0 +1,240 @@
+/* SCSS version in codepen */
+  /* @import url("https://fonts.googleapis.com/css?family=Open+Sans:800,400");
+      @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css");
+
+      $serdaigle: #222F5B;
+      $griffondor: #AE0001;
+      $serpentard: #2A623D;
+      $poufsouffle: #FFDB00;
+
+      * {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        overflow: hidden;
+      }
+
+      .frame {
+        position: relative;
+        width: 400px;
+        height: 400px;
+        color: white;
+        font-family: 'Open Sans', Helvetica, sans-serif;
+        border-radius: 5px;
+        box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        display: flex;
+      }
+
+      .box {
+        flex: 1 1 auto;
+        width: 25%;
+        position: relative;
+        transition: all .3s ease-in-out;
+        overflow: hidden;
+
+        &:hover {
+          width: 120%;
+
+          & .house {
+            transform: translateY(-250px);
+          }
+
+          & .poem {
+            transform: none;
+          }
+        }
+
+        &-1 {
+          background-color: $griffondor;
+        }
+
+        &-2 {
+          background-color: $serdaigle;
+        }
+
+        &-3 {
+          background-color: $poufsouffle;
+
+          & .poem {
+            color: black
+          }
+        }
+
+        &-4 {
+          background-color: $serpentard;
+        }
+      }
+
+      .house {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        text-transform: uppercase;
+        font-size: 30px;
+        font-weight: 800;
+        transform-origin: left center;
+        transform: rotate(-90deg);
+        transition: all .3s ease-in-out;
+      }
+
+      .poem {
+        white-space: nowrap;
+        font-size: 14px;
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        line-height: 22px;
+        transform: translateX(100px);
+        transition: all .3s ease-in-out .1s;
+
+        &::after {
+          content: "\f6e8";
+          font-family: "Font Awesome 6 Free";
+          color: white;
+          font-size: 50px;
+          font-weight: 700;
+          position: absolute;
+          top: 150%;
+          left: 160px;
+        }
+      }
+
+      svg {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 200px;
+        height: 20px;
+        fill: none;
+        stroke: white;
+        stroke-width: 2px;
+      } */
+
+/* CSS version */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:800,400");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.frame {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  color: white;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  border-radius: 5px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  display: flex;
+}
+
+.box {
+  flex: 1 1 auto;
+  width: 25%;
+  position: relative;
+  transition: all .3s ease-in-out;
+  overflow: hidden;
+}
+
+.box:hover {
+  width: 120%;
+}
+
+.box .house {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 800;
+  transform-origin: left center;
+  transform: rotate(-90deg);
+  transition: all .3s ease-in-out;
+}
+
+.box:hover .house {
+  transform: translateY(-250px);
+}
+
+.box .poem {
+  white-space: nowrap;
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  line-height: 22px;
+  transform: translateX(100px);
+  transition: all .3s ease-in-out .1s;
+}
+
+.box:hover .poem {
+  transform: none;
+}
+
+.box .poem::after {
+  content: "\f6e8";
+  font-family: "Font Awesome 6 Free";
+  color: white;
+  font-size: 50px;
+  font-weight: 700;
+  position: absolute;
+  top: 150%;
+  left: 160px;
+}
+
+.box-1 {
+  background-color: #AE0001;
+}
+
+.box-2 {
+  background-color: #222F5B;
+}
+
+.box-3 {
+  background-color: #FFDB00;
+}
+
+.box-3 .poem {
+  color: black;
+}
+
+.box-4 {
+  background-color: #2A623D;
+}
+
+svg {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 200px;
+  height: 20px;
+  fill: none;
+  stroke: white;
+  stroke-width: 2px;
+}
